@@ -26,7 +26,7 @@ const features = [
       "Analytics tracking",
       "AI-triggered tour recommendations",
     ],
-    costs: { qr: "$4,000", ble: "$8,500", ar: "$11,000" },
+    costs: { qr: "$5,000", ble: "$7,000", ar: "$14,000" },
   },
   {
     id: "avatar",
@@ -43,7 +43,7 @@ const features = [
       "Interactive experiences with buttons",
       "AI Chat — guests can ask anything",
     ],
-    costs: { qr: "$6,000", ble: "$6,000", ar: "$6,000" },
+    costs: { qr: "$3,500", ble: "$3,500", ar: "$3,500" },
   },
   {
     id: "ai",
@@ -63,13 +63,13 @@ const features = [
       "Hallucination prevention",
       "\"Ask AI\" contextual chat",
     ],
-    costs: { qr: "$16,000", ble: "$16,000", ar: "$16,000" },
+    costs: { qr: "$14,500", ble: "$14,500", ar: "$14,500" },
   },
   {
     id: "maps",
     icon: "🗺️",
     bg: "rgba(251,113,133,0.1)",
-    title: "Interactive Maps & Navigation",
+    title: "Interactive Maps & Guided Navigation",
     desc: "Level-by-level floor maps with real-time positioning and guided navigation.",
     items: [
       "7 floor maps with level-by-level detail",
@@ -79,7 +79,7 @@ const features = [
       "Multi-floor navigation structure",
       "Avatar narration at every hotspot",
     ],
-    costs: { qr: "$5,000", ble: "$9,500", ar: "$12,000" },
+    costs: { qr: "$7,500", ble: "$9,500", ar: "$14,000" },
   },
   {
     id: "arch",
@@ -95,7 +95,7 @@ const features = [
       "Video & 360° video integration",
       "Avatar narration & Ask AI",
     ],
-    costs: { qr: "$6,000", ble: "$6,000", ar: "$8,000" },
+    costs: { qr: "$7,000", ble: "$7,000", ar: "$7,000" },
   },
   {
     id: "interior",
@@ -110,7 +110,7 @@ const features = [
       "Interactive hotspots at key moments",
       "Avatar narration & Ask AI",
     ],
-    costs: { qr: "$4,000", ble: "$4,000", ar: "$5,000" },
+    costs: { qr: "$3,500", ble: "$3,500", ar: "$3,500" },
   },
   {
     id: "art",
@@ -125,7 +125,7 @@ const features = [
       "Location-triggered storytelling",
       "Avatar narration & Ask AI",
     ],
-    costs: { qr: "$4,000", ble: "$4,000", ar: "$4,000" },
+    costs: { qr: "$3,000", ble: "$3,000", ar: "$3,000" },
   },
   {
     id: "engagement",
@@ -140,7 +140,22 @@ const features = [
       "Venue highlights with capacity details",
       "Simple enquiry form for event leads",
     ],
-    costs: { qr: "$4,000", ble: "$4,000", ar: "$4,000" },
+    costs: { qr: "$2,000", ble: "$2,000", ar: "$2,000" },
+  },
+  {
+    id: "tracking",
+    icon: "📊",
+    bg: "rgba(251,113,133,0.08)",
+    title: "User Behavior Tracking",
+    desc: "Recommendations, heatmaps & offers powered by real-time user behavior analytics.",
+    items: [
+      "User behavior heatmaps",
+      "Personalized recommendations engine",
+      "Location-based offers & promotions",
+      "Session analytics & engagement metrics",
+      "A/B testing framework",
+    ],
+    costs: { qr: "-", ble: "$4,000", ar: "$4,000" },
   },
 ];
 
