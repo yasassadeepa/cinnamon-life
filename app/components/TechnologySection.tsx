@@ -8,7 +8,6 @@ const techData = {
   qr: {
     label: "QR Code",
     badge: "Tier 1",
-    icon: "📱",
     subtitle: "Proven & Cost-Effective",
     description:
       "Guests scan a printed QR code at each designated stop to unlock narration, maps, content, and tour progression. Works on any smartphone camera — no app required.",
@@ -33,7 +32,6 @@ const techData = {
   ble: {
     label: "BLE Beacons",
     badge: "Tier 2 — Recommended",
-    icon: "📡",
     subtitle: "Seamless & Enterprise-Grade",
     description:
       "Bluetooth Low Energy beacons are small, battery-powered devices installed at each tour point. When a guest's phone comes within range, the platform automatically triggers relevant content — no scanning required.",
@@ -60,7 +58,6 @@ const techData = {
   ar: {
     label: "AR + AI",
     badge: "Tier 3",
-    icon: "🔮",
     subtitle: "Most Immersive Experience",
     description:
       "The property is spatially mapped, enabling guests to hold up their phone and see architecture, storytelling, wayfinding overlays, and interactive content in augmented reality — layered directly onto the physical environment.",
@@ -89,184 +86,128 @@ export default function TechnologySection() {
   const tech = techData[activeTab];
 
   return (
-    <section id="technology" className="section">
-      <div className="section-inner">
-        <div className="section-label">Technology Comparison</div>
-        <h2 className="section-title">
-          Choose Your <span className="text-gradient-gold">Technology</span>
-        </h2>
-        <p className="section-subtitle" style={{ marginBottom: 48 }}>
-          All three tiers share the same Concierge, AI Knowledge Layer, and
-          content library. The difference is how the platform detects guest
-          location and triggers the experience.
-        </p>
+    <section id="technology" className="section" style={{ background: "var(--bg-secondary)" }}>
+      <div className="section-inner grid-2-col">
+        {/* Left Column: Title & Tab Selector */}
+        <div style={{ position: "sticky", top: 120, alignSelf: "start" }}>
+          <div className="section-label">Technology Comparison</div>
+          <h2 className="section-title">
+            Choose Your <br />
+            <span style={{ color: "var(--brand-purple)" }}>Technology</span>
+          </h2>
+          <p className="section-subtitle" style={{ marginBottom: 40, fontSize: "0.95rem" }}>
+            All three tiers share the same Concierge, AI Knowledge Layer, and
+            content library. The difference is how the platform detects guest
+            location and triggers the experience.
+          </p>
 
-        {/* Tab selector */}
-        <div
-          style={{
-            display: "flex",
-            gap: 8,
-            marginBottom: 40,
-            flexWrap: "wrap",
-          }}
-        >
-          {(["qr", "ble", "ar"] as Tab[]).map((key) => {
-            const d = techData[key];
-            return (
-              <button
-                key={key}
-                onClick={() => setActiveTab(key)}
-                style={{
-                  padding: "14px 28px",
-                  borderRadius: "var(--radius-md)",
-                  border:
-                    activeTab === key
-                      ? key === "ble"
-                        ? "1px solid var(--border-gold)"
-                        : "1px solid rgba(255,255,255,0.15)"
-                      : "1px solid var(--border-subtle)",
-                  background:
-                    activeTab === key
-                      ? key === "ble"
-                        ? "rgba(196, 163, 90, 0.08)"
-                        : "rgba(255,255,255,0.04)"
-                      : "transparent",
-                  color:
-                    activeTab === key
-                      ? key === "ble"
-                        ? "var(--gold-300)"
-                        : "var(--text-primary)"
-                      : "var(--text-muted)",
-                  fontSize: "0.9rem",
-                  fontWeight: 500,
-                  cursor: "pointer",
-                  transition: "all 0.25s ease",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 8,
-                }}
-              >
-                <span style={{ fontSize: "1.1rem" }}>{d.icon}</span>
-                {d.label}
-              </button>
-            );
-          })}
+          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            {(["qr", "ble", "ar"] as Tab[]).map((key) => {
+              const d = techData[key];
+              return (
+                <button
+                  key={key}
+                  onClick={() => setActiveTab(key)}
+                  style={{
+                    padding: "16px 24px",
+                    border: "1px solid",
+                    borderColor: activeTab === key ? "var(--brand-purple)" : "var(--border-subtle)",
+                    background: activeTab === key ? "var(--brand-purple)" : "transparent",
+                    color: activeTab === key ? "#fff" : "var(--text-secondary)",
+                    textAlign: "left",
+                    fontSize: "1rem",
+                    fontWeight: 600,
+                    cursor: "pointer",
+                    transition: "all 0.2s ease",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  {d.label}
+                  {key === "ble" && activeTab !== "ble" && (
+                    <span style={{ fontSize: "0.75rem", color: "var(--brand-purple)" }}>★ Recommended</span>
+                  )}
+                  {key === "ble" && activeTab === "ble" && (
+                    <span style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.7)" }}>★ Recommended</span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
-        {/* Content */}
-        <div
-          className="glass-gold"
-          style={{
-            borderRadius: "var(--radius-lg)",
-            padding: 40,
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 12,
-              marginBottom: 8,
-            }}
-          >
-            <span className="badge badge-gold">{tech.badge}</span>
-          </div>
-          <h3
-            style={{
-              fontSize: "1.6rem",
-              fontWeight: 700,
-              color: "var(--text-primary)",
-              marginBottom: 4,
-            }}
-          >
-            {tech.label}
-          </h3>
-          <p
-            style={{
-              fontSize: "1rem",
-              color: "var(--gold-400)",
-              fontWeight: 500,
-              marginBottom: 16,
-            }}
-          >
-            {tech.subtitle}
-          </p>
-          <p
-            style={{
-              fontSize: "0.95rem",
-              color: "var(--text-secondary)",
-              lineHeight: 1.8,
-              marginBottom: 36,
-              maxWidth: 800,
-            }}
-          >
-            {tech.description}
-          </p>
-
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-              gap: 40,
-            }}
-          >
-            {/* Pros */}
-            <div>
-              <h4
-                style={{
-                  fontSize: "0.9rem",
-                  fontWeight: 600,
-                  color: "var(--accent-emerald)",
-                  marginBottom: 16,
-                  letterSpacing: "0.04em",
-                  textTransform: "uppercase",
-                }}
-              >
-                ✓ Advantages
-              </h4>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 4,
-                }}
-              >
-                {tech.pros.map((p, i) => (
-                  <div key={i} className="pro-item">
-                    <span className="pro-icon">✓</span>
-                    {p}
-                  </div>
-                ))}
-              </div>
+        {/* Right Column: Content */}
+        <div>
+          <div style={{ marginBottom: 40 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+              <span style={{
+                fontSize: "0.75rem",
+                fontWeight: 600,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                padding: "4px 12px",
+                background: "rgba(97, 45, 135, 0.1)",
+                color: "var(--brand-purple)",
+              }}>
+                {tech.badge}
+              </span>
             </div>
+            <h3 style={{ fontSize: "1.8rem", fontWeight: 600, color: "var(--text-primary)", marginBottom: 8 }}>
+              {tech.label}
+            </h3>
+            <p style={{ fontSize: "1.1rem", color: "var(--brand-purple)", fontWeight: 500, marginBottom: 24 }}>
+              {tech.subtitle}
+            </p>
+            <p style={{ fontSize: "1rem", color: "var(--text-secondary)", lineHeight: 1.8, marginBottom: 40 }}>
+              {tech.description}
+            </p>
 
-            {/* Cons */}
-            <div>
-              <h4
-                style={{
-                  fontSize: "0.9rem",
+            <div style={{ display: "flex", flexDirection: "column", gap: 48 }}>
+              {/* Pros */}
+              <div>
+                <h4 style={{
+                  fontSize: "1rem",
                   fontWeight: 600,
-                  color: "var(--accent-rose)",
-                  marginBottom: 16,
-                  letterSpacing: "0.04em",
-                  textTransform: "uppercase",
-                }}
-              >
-                ✕ Considerations
-              </h4>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 4,
-                }}
-              >
-                {tech.cons.map((c, i) => (
-                  <div key={i} className="con-item">
-                    <span className="con-icon">✕</span>
-                    {c}
-                  </div>
-                ))}
+                  color: "var(--text-primary)",
+                  marginBottom: 20,
+                  letterSpacing: "0.02em",
+                  borderBottom: "1px solid var(--border-medium)",
+                  paddingBottom: 8,
+                }}>
+                  Advantages
+                </h4>
+                <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                  {tech.pros.map((p, i) => (
+                    <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 12, fontSize: "0.95rem", color: "var(--text-secondary)" }}>
+                      <span style={{ color: "var(--brand-purple)" }}>✓</span>
+                      {p}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Cons */}
+              <div>
+                <h4 style={{
+                  fontSize: "1rem",
+                  fontWeight: 600,
+                  color: "var(--text-primary)",
+                  marginBottom: 20,
+                  letterSpacing: "0.02em",
+                  borderBottom: "1px solid var(--border-medium)",
+                  paddingBottom: 8,
+                }}>
+                  Considerations
+                </h4>
+                <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                  {tech.cons.map((c, i) => (
+                    <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 12, fontSize: "0.95rem", color: "var(--text-secondary)" }}>
+                      <span style={{ color: "var(--text-muted)", opacity: 0.7 }}>✕</span>
+                      {c}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

@@ -15,73 +15,60 @@ export default function AssumptionsSection() {
   ];
 
   return (
-    <section
-      className="section"
-      style={{ background: "var(--bg-secondary)" }}
-    >
-      <div className="section-inner">
-        <div className="section-label">Important Notes</div>
-        <h2 className="section-title">
-          Key <span className="text-gradient-gold">Assumptions</span>
-        </h2>
-        <p className="section-subtitle" style={{ marginBottom: 40 }}>
-          Please review the following assumptions that underpin this proposal.
-        </p>
+    <section className="section" style={{ background: "var(--bg-secondary)", paddingBottom: 120 }}>
+      <div className="section-inner grid-2-col">
+        {/* Left Column */}
+        <div style={{ position: "sticky", top: 120, alignSelf: "start" }}>
+          <div className="section-label">Important Notes</div>
+          <h2 className="section-title">
+            Key <br />
+            <span style={{ color: "var(--brand-purple)" }}>Assumptions</span>
+          </h2>
+          <p className="section-subtitle" style={{ marginBottom: 40, fontSize: "0.95rem" }}>
+            Please review the following assumptions that underpin this proposal.
+          </p>
+        </div>
 
-        <div
-          className="glass"
-          style={{
-            borderRadius: "var(--radius-lg)",
-            padding: "32px",
-          }}
-        >
-          <div
-            style={{ display: "flex", flexDirection: "column", gap: 16 }}
-          >
-            {assumptions.map((a, i) => (
-              <div
-                key={i}
-                style={{
-                  display: "flex",
-                  gap: 16,
-                  alignItems: "flex-start",
-                  paddingBottom: i < assumptions.length - 1 ? 16 : 0,
-                  borderBottom:
-                    i < assumptions.length - 1
-                      ? "1px solid var(--border-subtle)"
-                      : "none",
-                }}
-              >
-                <span
+        {/* Right Column */}
+        <div>
+          <div style={{ borderTop: "2px solid var(--text-primary)", paddingTop: 24 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
+              {assumptions.map((a, i) => (
+                <div
+                  key={i}
                   style={{
-                    width: 28,
-                    height: 28,
-                    borderRadius: 6,
-                    background: "rgba(196,163,90,0.08)",
                     display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: "0.72rem",
-                    fontWeight: 700,
-                    color: "var(--gold-400)",
-                    flexShrink: 0,
-                    fontFamily: "var(--font-mono)",
+                    gap: 20,
+                    alignItems: "flex-start",
+                    padding: "24px 0",
+                    borderBottom: "1px solid var(--border-medium)",
                   }}
                 >
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <p
-                  style={{
-                    fontSize: "0.88rem",
-                    color: "var(--text-secondary)",
-                    lineHeight: 1.7,
-                    margin: 0,
-                  }}
-                >
-                  {a}
-                </p>
-              </div>
-            ))}
+                  <span
+                    style={{
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "0.9rem",
+                      fontWeight: 500,
+                      color: "var(--text-muted)",
+                      flexShrink: 0,
+                      width: 28,
+                    }}
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p
+                    style={{
+                      fontSize: "0.95rem",
+                      color: "var(--text-secondary)",
+                      lineHeight: 1.7,
+                      margin: 0,
+                    }}
+                  >
+                    {a}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

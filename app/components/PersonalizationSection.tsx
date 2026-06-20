@@ -3,7 +3,7 @@
 export default function PersonalizationSection() {
   const categories = [
     {
-      icon: "🌐",
+      number: "01",
       title: "Multilingual Capability",
       items: [
         "AI Concierge narration and tours in multiple languages",
@@ -12,7 +12,7 @@ export default function PersonalizationSection() {
       ],
     },
     {
-      icon: "💎",
+      number: "02",
       title: "Loyalty & Discovery Integration",
       items: [
         "Personalised experiences based on Cinnamon Discovery tier",
@@ -21,7 +21,7 @@ export default function PersonalizationSection() {
       ],
     },
     {
-      icon: "🎯",
+      number: "03",
       title: "Behaviour-Based Personalisation",
       items: [
         "Tailored recommendations based on interests and past engagement",
@@ -30,7 +30,7 @@ export default function PersonalizationSection() {
       ],
     },
     {
-      icon: "🍽️",
+      number: "04",
       title: "Dining & Hospitality Extensions",
       items: [
         "Restaurant discovery and personalised dining recommendations",
@@ -40,7 +40,7 @@ export default function PersonalizationSection() {
       ],
     },
     {
-      icon: "🎪",
+      number: "05",
       title: "Events & Venue Personalisation",
       items: [
         "AI-assisted venue recommendations by event type",
@@ -51,73 +51,44 @@ export default function PersonalizationSection() {
   ];
 
   return (
-    <section className="section">
-      <div className="section-inner">
-        <div className="section-label">Guest Experience</div>
-        <h2 className="section-title">
-          Personalised{" "}
-          <span className="text-gradient-gold">Guest Journey</span>
-        </h2>
-        <p className="section-subtitle" style={{ marginBottom: 48 }}>
-          The platform is designed to grow with guest needs, extending the
-          Concierge&apos;s intelligence throughout every touchpoint.
-        </p>
+    <section className="section" style={{ background: "var(--bg-primary)" }}>
+      <div className="section-inner grid-2-col">
+        {/* Left Column */}
+        <div style={{ position: "sticky", top: 120, alignSelf: "start" }}>
+          <div className="section-label">Guest Experience</div>
+          <h2 className="section-title">
+            Personalised <br />
+            <span style={{ color: "var(--brand-purple)" }}>Guest Journey</span>
+          </h2>
+          <p className="section-subtitle" style={{ marginBottom: 48, fontSize: "0.95rem" }}>
+            The platform is designed to grow with guest needs, extending the
+            Concierge&apos;s intelligence throughout every touchpoint.
+          </p>
+        </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: 20,
-          }}
-        >
-          {categories.map((cat) => (
-            <div
-              key={cat.title}
-              className="card"
-              style={{ padding: "28px 24px" }}
-            >
-              <div
-                className="feature-icon"
-                style={{ background: "rgba(196,163,90,0.08)" }}
-              >
-                {cat.icon}
-              </div>
-              <h3
-                style={{
-                  fontSize: "1.05rem",
-                  fontWeight: 600,
-                  color: "var(--text-primary)",
-                  marginBottom: 14,
-                }}
-              >
-                {cat.title}
-              </h3>
-              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {cat.items.map((item, i) => (
-                  <div
-                    key={i}
-                    style={{
-                      display: "flex",
-                      alignItems: "flex-start",
-                      gap: 8,
-                      fontSize: "0.86rem",
-                      color: "var(--text-secondary)",
-                      lineHeight: 1.6,
-                    }}
-                  >
-                    <span
-                      style={{
-                        color: "var(--gold-400)",
-                        flexShrink: 0,
-                        marginTop: 2,
-                        fontSize: "0.65rem",
-                      }}
-                    >
-                      ◆
-                    </span>
-                    {item}
+        {/* Right Column */}
+        <div>
+          {categories.map((cat, index) => (
+            <div key={cat.title} style={{ marginBottom: 40 }}>
+              {index !== 0 && <div className="divider-sharp" style={{ marginBottom: 40 }} />}
+              
+              <div style={{ display: "flex", gap: 24 }}>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: "1.2rem", color: "var(--text-muted)", fontWeight: 300, paddingTop: 4 }}>
+                  {cat.number}
+                </div>
+                <div>
+                  <h3 style={{ fontSize: "1.3rem", fontWeight: 600, color: "var(--text-primary)", marginBottom: 16 }}>
+                    {cat.title}
+                  </h3>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                    {cat.items.map((item, i) => (
+                      <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: "0.9rem", color: "var(--text-secondary)" }}>
+                        <span style={{ color: "var(--brand-purple)" }}>—</span>
+                        <span>{item}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           ))}

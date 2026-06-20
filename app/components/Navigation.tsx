@@ -22,7 +22,7 @@ export default function Navigation() {
   }, []);
 
   return (
-    <nav className={`nav ${scrolled ? "scrolled" : ""}`} id="nav-top">
+    <nav className="nav" id="nav-top">
       <div
         style={{
           maxWidth: 1200,
@@ -39,29 +39,29 @@ export default function Navigation() {
             textDecoration: "none",
             display: "flex",
             alignItems: "center",
-            gap: 10,
+            gap: 12,
           }}
         >
           <span
             style={{
-              width: 32,
-              height: 32,
-              borderRadius: 8,
-              background: "linear-gradient(135deg, #c4a35a, #e8d5a3)",
+              width: 36,
+              height: 36,
+              background: "var(--brand-purple)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               fontSize: 16,
-              fontWeight: 700,
-              color: "#0a0a0f",
+              fontWeight: 600,
+              fontFamily: "var(--font-serif)",
+              color: "#ffffff",
             }}
           >
             CL
           </span>
           <span
             style={{
-              fontSize: "0.95rem",
-              fontWeight: 600,
+              fontSize: "1rem",
+              fontWeight: 500,
               color: "var(--text-primary)",
               letterSpacing: "0.02em",
             }}
@@ -84,7 +84,7 @@ export default function Navigation() {
               key={link.href}
               href={link.href}
               style={{
-                fontSize: "0.82rem",
+                fontSize: "0.85rem",
                 fontWeight: 500,
                 color: "var(--text-secondary)",
                 textDecoration: "none",
@@ -92,7 +92,7 @@ export default function Navigation() {
                 letterSpacing: "0.02em",
               }}
               onMouseEnter={(e) =>
-                (e.currentTarget.style.color = "var(--gold-300)")
+                (e.currentTarget.style.color = "var(--brand-purple)")
               }
               onMouseLeave={(e) =>
                 (e.currentTarget.style.color = "var(--text-secondary)")
@@ -130,8 +130,7 @@ export default function Navigation() {
             top: "100%",
             left: 0,
             right: 0,
-            background: "rgba(10, 10, 15, 0.95)",
-            backdropFilter: "blur(20px)",
+            background: "#ffffff",
             borderBottom: "1px solid var(--border-subtle)",
             padding: "16px 24px",
             display: "flex",
