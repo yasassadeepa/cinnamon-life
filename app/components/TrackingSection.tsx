@@ -21,20 +21,23 @@ export default function TrackingSection() {
           className="glass-gold"
           style={{
             borderRadius: "var(--radius-md)",
-            padding: "16px 24px",
+            padding: "18px 24px",
             marginBottom: 48,
             display: "flex",
             alignItems: "flex-start",
             gap: 12,
-            fontSize: "0.88rem",
+            fontSize: "0.9rem",
             color: "var(--gold-200)",
+            borderLeft: "4px solid var(--gold-500)",
           }}
         >
-          <span style={{ fontSize: "1.1rem", flexShrink: 0 }}>⚠️</span>
+          <span style={{ fontSize: "1.2rem", flexShrink: 0 }}>⚠️</span>
           <span>
-            <strong>Only available with BLE Beacons or AR + AI tiers.</strong>{" "}
-            The QR Code tier captures only discrete scan events with no passive
-            awareness of guest movement or engagement.
+            <strong>User Behavior Tracking is exclusively available with BLE Beacons (and AR + AI) tiers.</strong>{" "}
+            By using BLE Beacons, the platform can actively capture location and dwell data to unlock massive strategic value (such as **personalized guest recommendations**, **highly targeted future offers**, and **visual user heatmaps** of movement).
+            <span style={{ color: "var(--accent-rose)", fontWeight: "bold", display: "block", marginTop: "6px" }}>
+              Note: This feature is completely unavailable in the QR Code base system, as QR codes are limited to static, discrete scans with no continuous awareness of guest movement.
+            </span>
           </span>
         </div>
 

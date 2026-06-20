@@ -1,5 +1,4 @@
 import Navigation from "./components/Navigation";
-import HeroSection from "./components/HeroSection";
 import OverviewSection from "./components/OverviewSection";
 import PillarsSection from "./components/PillarsSection";
 import FeaturesSection from "./components/FeaturesSection";
@@ -11,15 +10,12 @@ import PersonalizationSection from "./components/PersonalizationSection";
 import TrackingSection from "./components/TrackingSection";
 import BeyondSection from "./components/BeyondSection";
 import AssumptionsSection from "./components/AssumptionsSection";
-import FooterSection from "./components/FooterSection";
 
 export default function Home() {
   return (
     <>
       <Navigation />
       <main>
-        <HeroSection />
-        <div className="divider" />
         <OverviewSection />
         <div className="divider" />
         <PillarsSection />
@@ -41,8 +37,6 @@ export default function Home() {
         <BeyondSection />
         <div className="divider" />
         <AssumptionsSection />
-        <div className="divider" />
-        <FooterSection />
       </main>
     </>
   );

@@ -9,7 +9,6 @@ const navLinks = [
   { label: "Technology", href: "#technology" },
   { label: "Investment", href: "#investment" },
   { label: "Services", href: "#services" },
-  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navigation() {
@@ -35,7 +34,7 @@ export default function Navigation() {
       >
         {/* Logo */}
         <a
-          href="#hero"
+          href="#overview"
           style={{
             textDecoration: "none",
             display: "flex",

@@ -25,7 +25,7 @@ export default function RecommendationSection() {
     {
       number: "05",
       title: "Cost Delta is Justified",
-      text: "The difference is approximately $9,000 in upfront investment. Given the total platform investment and long-term operational benefits, this premium is highly justifiable.",
+      text: "The difference is approximately $8,000 in upfront investment. Given the total platform investment and long-term operational benefits, this premium is highly justifiable.",
     },
   ];
 

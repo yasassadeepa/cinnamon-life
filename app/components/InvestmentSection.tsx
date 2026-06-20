@@ -2,41 +2,47 @@
 
 export default function InvestmentSection() {
   const featureRows = [
-    { name: "Core Tour Platform", qr: "$4,000", ble: "$8,500", ar: "$11,000" },
-    { name: "AI Concierge Avatar", qr: "$6,000", ble: "$6,000", ar: "$6,000" },
+    { name: "Core Tour Platform", qr: "$5,000", ble: "$7,000", ar: "$14,000" },
+    { name: "AI Concierge Avatar", qr: "$3,500", ble: "$3,500", ar: "$3,500" },
     {
       name: "AI Knowledge & Intelligence Layer",
-      qr: "$16,000",
-      ble: "$16,000",
-      ar: "$16,000",
+      qr: "$14,500",
+      ble: "$14,500",
+      ar: "$14,500",
     },
     {
-      name: "Interactive Maps & Navigation",
-      qr: "$5,000",
+      name: "Interactive Maps & Guided Navigation",
+      qr: "$7,500",
       ble: "$9,500",
-      ar: "$12,000",
+      ar: "$14,000",
     },
     {
       name: "Architecture Experience",
-      qr: "$6,000",
-      ble: "$6,000",
-      ar: "$8,000",
+      qr: "$7,000",
+      ble: "$7,000",
+      ar: "$7,000",
     },
     {
       name: "Interior Design Experience",
-      qr: "$4,000",
-      ble: "$4,000",
-      ar: "$5,000",
+      qr: "$3,500",
+      ble: "$3,500",
+      ar: "$3,500",
     },
     {
       name: "Art Experience (Design Archive)",
-      qr: "$4,000",
-      ble: "$4,000",
-      ar: "$4,000",
+      qr: "$3,000",
+      ble: "$3,000",
+      ar: "$3,000",
     },
     {
       name: "Enhanced Guest Engagement",
-      qr: "$4,000",
+      qr: "$2,000",
+      ble: "$2,000",
+      ar: "$2,000",
+    },
+    {
+      name: "User Behavior Tracking (Recommendations, Heatmaps & Offers)",
+      qr: "-",
       ble: "$4,000",
       ar: "$4,000",
     },
@@ -45,31 +51,37 @@ export default function InvestmentSection() {
   const groupRows = [
     {
       name: "Concierge (AI Avatar + Knowledge Layer)",
-      qr: "$22,000",
-      ble: "$22,000",
-      ar: "$22,000",
+      qr: "$18,000",
+      ble: "$18,000",
+      ar: "$18,000",
     },
     {
       name: "Core Platform & Maps",
-      qr: "$9,000",
-      ble: "$18,000",
-      ar: "$23,000",
+      qr: "$12,500",
+      ble: "$16,500",
+      ar: "$28,000",
     },
     {
       name: "Architecture & Interior Experiences",
-      qr: "$10,000",
-      ble: "$10,000",
-      ar: "$13,000",
+      qr: "$10,500",
+      ble: "$10,500",
+      ar: "$10,500",
     },
     {
       name: "Design Archive (Art Experience)",
-      qr: "$4,000",
-      ble: "$4,000",
-      ar: "$4,000",
+      qr: "$3,000",
+      ble: "$3,000",
+      ar: "$3,000",
     },
     {
       name: "Enhanced Guest Engagement",
-      qr: "$4,000",
+      qr: "$2,000",
+      ble: "$2,000",
+      ar: "$2,000",
+    },
+    {
+      name: "User Behavior Tracking",
+      qr: "-",
       ble: "$4,000",
       ar: "$4,000",
     },
@@ -141,7 +153,7 @@ export default function InvestmentSection() {
                 marginBottom: 4,
               }}
             >
-              ~$49,000
+              ~$46,000
             </div>
             <div
               style={{
@@ -151,7 +163,7 @@ export default function InvestmentSection() {
                 marginBottom: 24,
               }}
             >
-              ~Rs. 16,339,540 LKR
+              ~Rs. 15,339,160 LKR
             </div>
             <div
               style={{
@@ -227,7 +239,7 @@ export default function InvestmentSection() {
               }}
               className="text-gradient-gold"
             >
-              ~$58,000
+              ~$54,000
             </div>
             <div
               style={{
@@ -237,7 +249,7 @@ export default function InvestmentSection() {
                 marginBottom: 24,
               }}
             >
-              ~Rs. 19,340,680 LKR
+              ~Rs. 18,006,840 LKR
             </div>
             <div
               style={{
@@ -311,7 +323,7 @@ export default function InvestmentSection() {
                 marginBottom: 4,
               }}
             >
-              ~$66,000
+              ~$65,500
             </div>
             <div
               style={{
@@ -321,7 +333,7 @@ export default function InvestmentSection() {
                 marginBottom: 24,
               }}
             >
-              ~Rs. 22,008,360 LKR
+              ~Rs. 21,841,630 LKR
             </div>
             <div
               style={{
@@ -429,7 +441,7 @@ export default function InvestmentSection() {
                       fontFamily: "var(--font-mono)",
                     }}
                   >
-                    ~$49,000
+                    ~$46,000
                   </td>
                   <td
                     style={{
@@ -437,7 +449,7 @@ export default function InvestmentSection() {
                       fontFamily: "var(--font-mono)",
                     }}
                   >
-                    ~$58,000
+                    ~$54,000
                   </td>
                   <td
                     style={{
@@ -445,7 +457,7 @@ export default function InvestmentSection() {
                       fontFamily: "var(--font-mono)",
                     }}
                   >
-                    ~$66,000
+                    ~$65,500
                   </td>
                 </tr>
               </tbody>
@@ -527,7 +539,7 @@ export default function InvestmentSection() {
                       fontFamily: "var(--font-mono)",
                     }}
                   >
-                    ~$49,000
+                    ~$46,000
                   </td>
                   <td
                     style={{
@@ -535,7 +547,7 @@ export default function InvestmentSection() {
                       fontFamily: "var(--font-mono)",
                     }}
                   >
-                    ~$58,000
+                    ~$54,000
                   </td>
                   <td
                     style={{
@@ -543,7 +555,7 @@ export default function InvestmentSection() {
                       fontFamily: "var(--font-mono)",
                     }}
                   >
-                    ~$66,000
+                    ~$65,500
                   </td>
                 </tr>
               </tbody>
