@@ -103,13 +103,13 @@ export default function OverviewSection() {
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                 <tr>
                   <td style={{ fontWeight: 500, color: "var(--text-primary)" }}>
                     QR Code
                   </td>
                   <td>Guest scans a QR code at each stop</td>
                   <td style={{ textAlign: "right", fontFamily: "var(--font-mono)" }}>
-                    ~$49,000
+                    ~$46,000
                   </td>
                 </tr>
                 <tr
@@ -145,7 +145,7 @@ export default function OverviewSection() {
                       fontWeight: 600,
                     }}
                   >
-                    ~$58,000
+                    ~$54,000
                   </td>
                 </tr>
                 <tr>
@@ -154,7 +154,7 @@ export default function OverviewSection() {
                   </td>
                   <td>Augmented Reality with spatial mapping</td>
                   <td style={{ textAlign: "right", fontFamily: "var(--font-mono)" }}>
-                    ~$66,000
+                    ~$65,500
                   </td>
                 </tr>
               </tbody>
