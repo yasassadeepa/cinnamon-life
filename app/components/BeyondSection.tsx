@@ -3,7 +3,7 @@
 export default function BeyondSection() {
   const channels = [
     {
-      icon: "📱",
+      number: "01",
       title: "Social Media",
       items: [
         "AI-powered experiences shared across platforms",
@@ -12,7 +12,7 @@ export default function BeyondSection() {
       ],
     },
     {
-      icon: "📰",
+      number: "02",
       title: "Print Marketing",
       items: [
         "QR and BLE-enabled advertising in brochures and print campaigns",
@@ -21,7 +21,7 @@ export default function BeyondSection() {
       ],
     },
     {
-      icon: "🌍",
+      number: "03",
       title: "Global Reach",
       items: [
         "Web-based architecture accessible from any device, anywhere",
@@ -30,7 +30,7 @@ export default function BeyondSection() {
       ],
     },
     {
-      icon: "📣",
+      number: "04",
       title: "Campaigns & Promotions",
       items: [
         "Promote restaurants, events, and seasonal offers through AI engagement",
@@ -41,73 +41,44 @@ export default function BeyondSection() {
   ];
 
   return (
-    <section className="section">
-      <div className="section-inner">
-        <div className="section-label">Extended Reach</div>
-        <h2 className="section-title">
-          Beyond the{" "}
-          <span className="text-gradient-gold">Property</span>
-        </h2>
-        <p className="section-subtitle" style={{ marginBottom: 48 }}>
-          The platform&apos;s AI layer and content reach prospective guests, event
-          planners, and travellers anywhere in the world.
-        </p>
+    <section className="section" style={{ background: "var(--bg-primary)" }}>
+      <div className="section-inner grid-2-col">
+        {/* Left Column */}
+        <div style={{ position: "sticky", top: 120, alignSelf: "start" }}>
+          <div className="section-label">Extended Reach</div>
+          <h2 className="section-title">
+            Beyond the <br />
+            <span style={{ color: "var(--brand-purple)" }}>Property</span>
+          </h2>
+          <p className="section-subtitle" style={{ marginBottom: 48, fontSize: "0.95rem" }}>
+            The platform&apos;s AI layer and content reach prospective guests, event
+            planners, and travellers anywhere in the world.
+          </p>
+        </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))",
-            gap: 20,
-          }}
-        >
-          {channels.map((ch) => (
-            <div
-              key={ch.title}
-              className="card"
-              style={{ padding: "28px 24px" }}
-            >
-              <div
-                className="feature-icon"
-                style={{ background: "rgba(129,140,248,0.08)" }}
-              >
-                {ch.icon}
-              </div>
-              <h3
-                style={{
-                  fontSize: "1.05rem",
-                  fontWeight: 600,
-                  color: "var(--text-primary)",
-                  marginBottom: 14,
-                }}
-              >
-                {ch.title}
-              </h3>
-              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {ch.items.map((item, i) => (
-                  <div
-                    key={i}
-                    style={{
-                      display: "flex",
-                      alignItems: "flex-start",
-                      gap: 8,
-                      fontSize: "0.86rem",
-                      color: "var(--text-secondary)",
-                      lineHeight: 1.6,
-                    }}
-                  >
-                    <span
-                      style={{
-                        color: "var(--accent-blue)",
-                        flexShrink: 0,
-                        marginTop: 2,
-                        fontSize: "0.65rem",
-                      }}
-                    >
-                      ◆
-                    </span>
-                    {item}
+        {/* Right Column */}
+        <div>
+          {channels.map((ch, index) => (
+            <div key={ch.title} style={{ marginBottom: 40 }}>
+              {index !== 0 && <div className="divider-sharp" style={{ marginBottom: 40 }} />}
+              
+              <div style={{ display: "flex", gap: 24 }}>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: "1.2rem", color: "var(--text-muted)", fontWeight: 300, paddingTop: 4 }}>
+                  {ch.number}
+                </div>
+                <div>
+                  <h3 style={{ fontSize: "1.3rem", fontWeight: 600, color: "var(--text-primary)", marginBottom: 16 }}>
+                    {ch.title}
+                  </h3>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                    {ch.items.map((item, i) => (
+                      <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: "0.9rem", color: "var(--text-secondary)" }}>
+                        <span style={{ color: "var(--brand-purple)" }}>—</span>
+                        <span>{item}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           ))}
